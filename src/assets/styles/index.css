@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "Amazon Ember";
+  src: url("../fonts/Amazon_Ember_Regular.ttf");
+}
+body {
+  font-family: "Amazon Ember";
+}
+.wrapper {
+  height: 100vh;
+  display: flex;
+  /* Direction of the items, can be row or column */
+  flex-direction: column;
+  overflow: hidden;
+}
+header,
+footer {
+  display: flex;
+  height: 60px;
+  background-color: #0f1111;
+  justify-content: center;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+footer a,
+footer a:hover {
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+main {
+  flex: 1;
+  overflow-y: scroll;
+}
+.header_logo_section {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+.header-brand-text {
+  padding-left: 10px;
+}
+.header_cart_section {
+  display: flex;
+  width: 80%;
+  align-items: baseline;
+  justify-content: flex-end;
+  color: #fff;
+}
+.header-cart-text {
+  padding-right: 5px;
+}
+.cart-count {
+  padding: 3px 12px;
+  background: #f08804;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 800;
+}
+.header-cart-count-section {
+  position: absolute;
+  top: 2px;
+  right: 21px;
+}
+.products-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.product-card {
+  margin: 10px;
+  border: 1px solid #999999;
+  height: 380px;
+  width: 340px;
+}
+.product-img {
+  height: 300px;
+  width: 100%;
+}
+.product-info {
+  text-align: center;
+  margin-top: 8px;
+}
+.product-increment-decrement {
+  padding: 5px 16px;
+  background-color: #f0c14b;
+  color: #fff;
+  cursor: pointer;
+}
+.product-count {
+  padding: 10px;
+}

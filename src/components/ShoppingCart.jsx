@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import Product from "./Product";
-class ShoppingCart extends Component {
+import { Product } from "./Product";
+export class ShoppingCart extends Component {
   render() {
     const {
       onReset,
       onDelete,
       onIncrement,
       onDecrement,
-      products
+      products,
     } = this.props;
 
     return (
@@ -24,7 +24,7 @@ class ShoppingCart extends Component {
           </div>
         </div>
 
-        {products.map(product => (
+        {products.map((product) => (
           <Product
             key={product.id}
             onDelete={onDelete}
@@ -37,5 +37,3 @@ class ShoppingCart extends Component {
     );
   }
 }
-
-export default ShoppingCart;

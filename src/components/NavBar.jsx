@@ -1,7 +1,7 @@
 import React from "react";
 
 //Stateless functional components
-const NavBar = ({ totalCount }) => {
+export const NavBar = ({ totalCount }) => {
   return (
     <React.Fragment>
       <nav className="navbar navbar-light bg-light">
@@ -15,5 +15,3 @@ const NavBar = ({ totalCount }) => {
     </React.Fragment>
   );
 };
-
-export default NavBar;

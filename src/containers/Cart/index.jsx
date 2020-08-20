@@ -1,9 +1,7 @@
 import React, { Component } from "react";
-import "./App.css";
-import NavBar from "./components/NavBar";
-import ShoppingCart from "./components/ShoppingCart";
+import { NavBar, ShoppingCart } from "../../components";
 
-class App extends Component {
+export class Cart extends Component {
   state = {
     products: [
       {
@@ -13,7 +11,7 @@ class App extends Component {
         price: 450.0,
         rating: 4.9,
         value: 0,
-        like: 0
+        like: 0,
       },
       {
         id: 2,
@@ -22,7 +20,7 @@ class App extends Component {
         price: 250.0,
         rating: 3.9,
         value: 0,
-        like: 0
+        like: 0,
       },
       {
         id: 3,
@@ -31,7 +29,7 @@ class App extends Component {
         price: 350.0,
         rating: 3.5,
         value: 0,
-        like: 0
+        like: 0,
       },
       {
         id: 4,
@@ -40,7 +38,7 @@ class App extends Component {
         price: 550.0,
         rating: 4.0,
         value: 0,
-        like: 0
+        like: 0,
       },
       {
         id: 5,
@@ -49,7 +47,7 @@ class App extends Component {
         price: 4550.0,
         rating: 4.5,
         value: 0,
-        like: 0
+        like: 0,
       },
       {
         id: 6,
@@ -58,17 +56,17 @@ class App extends Component {
         price: 650.0,
         rating: 2.8,
         value: 0,
-        like: 0
-      }
-    ]
+        like: 0,
+      },
+    ],
   };
 
-  handleDelete = productID => {
-    const products = this.state.products.filter(p => p.id !== productID);
+  handleDelete = (productID) => {
+    const products = this.state.products.filter((p) => p.id !== productID);
     this.setState({ products });
   };
 
-  handleIncrement = product => {
+  handleIncrement = (product) => {
     const products = [...this.state.products];
     const index = products.indexOf(product);
     products[index] = { ...product };
@@ -77,7 +75,7 @@ class App extends Component {
     //    console.log(this.state.products);
   };
 
-  handleDecrement = product => {
+  handleDecrement = (product) => {
     const products = [...this.state.products];
     const index = products.indexOf(product);
     products[index] = { ...product };
@@ -89,7 +87,7 @@ class App extends Component {
   };
 
   handleReset = () => {
-    const products = this.state.products.map(p => {
+    const products = this.state.products.map((p) => {
       p.value = 0;
       return p;
     });
@@ -100,7 +98,7 @@ class App extends Component {
     return (
       <div>
         <NavBar
-          totalCount={this.state.products.filter(p => p.value > 0).length}
+          totalCount={this.state.products.filter((p) => p.value > 0).length}
         />
         <main className="container">
           <ShoppingCart
@@ -115,5 +113,3 @@ class App extends Component {
     );
   }
 }
-
-export default App;

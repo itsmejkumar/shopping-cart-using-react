@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-class Product extends Component {
+export class CartDetails extends Component {
   state = {
-    value: this.props.products
+    value: this.props.products,
   };
 
   getBadgeClasses() {
@@ -64,5 +64,3 @@ class Product extends Component {
     );
   }
 }
-
-export default Product;
